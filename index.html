@@ -120,7 +120,19 @@
             <!-- Hero Section -->
             <section class="hero-law-firm-img-bg">
                     <div class="hero-overlay"></div>
-                    <img src="../JohnOLearySolicitors/assets/images/hero-law-firm-img-bg.webp" alt="Scyscrapers" fetchpriority="high">
+                    <picture>
+                        <source
+                            media="(max-width: 768px)"
+                            srcset="../JohnOLearySolicitors/assets/images/hero-law-firm-mobile-img-bg.webp">
+
+                        <img
+                            src="../JohnOLearySolicitors/assets/images/hero-law-firm-desktop-img-bg.webp"
+                            alt="Modern city skyline"
+                            fetchpriority="high"
+                            loading="eager"
+                            width="1920"
+                            height="1080">
+                    </picture>
                 <div class="hero-content">
                     <h1>John O’Leary Solicitors</h1>
                     <h3>Experienced legal representation you can rely on when it matters most.</h3>
