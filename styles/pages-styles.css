@@ -160,7 +160,7 @@ a:focus {
 /* --------------------------------------------------- CONTACT PAGE ---------------------------------------------------------- */
 
 .contact-side-by-side-form {
-    padding: 4rem 1rem;
+    padding: 2rem 1rem;
     min-width: 100%;
 }
 
@@ -184,10 +184,6 @@ a:focus {
     height: 20px;
     width: 20px;
     color: olive;
-}
-
-.section-subtitle {
-    color: rgb(148, 148, 148);
 }
 
 .contact-us-details {
