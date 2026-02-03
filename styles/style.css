@@ -1,0 +1,1042 @@
+/* ------------------------------------------------------------------------ CSS RERSET ------------------------------------------------------------------------------------------ */
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+
+/* accessibility for keyboards */
+a:focus {
+  outline: 2px solid olive;
+  outline-offset: 2px;
+}
+
+
+/* ------------------------------------------------------------------------ BASE ------------------------------------------------------------------------------------------------*/
+
+@font-face {
+    font-family: "Inter";
+    src: url("../assets/fonts/inter-regular-webfont.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("../assets/fonts/inter-medium-webfont.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("../assets/fonts/inter-semibold-webfont.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Playfair Display";
+    src: url("../assets/fonts/playfairdisplay-bold-webfont.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+h1 , h2 , h3 , h4 {
+    font-family: "Playfair Display";
+}
+
+p { 
+    font-family: "Inter";
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 2.3rem;
+    line-height: 1.3;
+}
+
+h3 {
+    font-size: 1.4rem;
+    line-height: 1.3;
+}
+
+h4 {
+    font-size: 1.1rem;
+    line-height: 1.3;
+}
+
+a {
+    font-family: "Inter";
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/* -------------------------------------------------------------------------- HEADER -------------------------------------------------------------------------------------------- */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: white;
+}
+
+.header-law {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    min-height: 0;
+    overflow: visible; 
+}
+
+/* Hide desktop navigation for mobile */
+.desktop-nav {
+    display: none;
+}
+
+/* Display mobile navigation */
+.mobile-nav {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    z-index: 999;
+}
+
+/* Resize company logo */
+.mobile-nav-logo img{
+    height: 40px;
+    width: auto;
+}
+
+/* Mobile hamburger logo styling (change stroke: color if needed) */
+#hamburger-icon {
+    border: 1px solid white;
+    background-color: white;
+}
+
+/* Resize hamburger icon */
+#hamburger-icon svg {
+    height: 40px;
+    width: auto;
+    stroke: black;
+}
+
+/* Style mobile items when expanded */
+.mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0 1.5rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    background: white;
+    transition: max-height 0.5s ease, padding 0.3s ease;
+}
+
+.mobile-menu a {
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    font-weight: 500;
+}
+
+/* Display mobile items on toggle */
+.mobile-menu.active {
+    max-height: 500px;
+    padding: 1rem 1.5rem;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+/* -------------------------------------------------------------------------- HERO SECTION --------------------------------------------------------------------------------------*/
+
+.hero-law-firm-img-bg {
+    position: relative;
+    height: 100svh;
+    width: 100%;
+}
+
+.hero-law-firm-img-bg img {
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: 2;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(3, 3, 3, 0.6);
+    z-index: 3;
+}
+
+.hero-content {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    max-width: 80%;
+    margin: 0 auto;
+    gap: 2rem;
+    z-index: 4;
+    color: white;
+    text-shadow: 1px 1px 4px black;
+}
+
+.hero-content a {
+    text-decoration: none;
+    color: white;
+    border: 1px solid olive;
+    border-radius: 0.5rem;
+    padding: 1rem 4rem;
+    align-items: center;
+    margin: 2rem auto 0 auto;
+    background-color: rgba(128, 128, 0, 0.5);
+    font-weight: bold;
+    box-shadow: 1px 1px 4px black;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+}
+
+.hero-content a:hover {
+    background-color: olive;
+}
+
+/* ------------------------------------------------------------- ABOUT US SECTION ---------------------------------------------------------------------------------------------*/
+
+.about-side-by-side {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 2rem 2rem 2rem;
+}
+
+.about-content {
+    padding: 1rem 0;
+}
+
+.about-content h2, h3{
+    padding-bottom: 1rem 0;
+}
+
+.about-content p {
+    padding: 1rem 0;
+}
+
+/* -------------------------------------------------------------- TEAM SECTION ------------------------------------------------------------------------------------------------*/
+
+/* main container */
+.animated-img-cards-section {
+    padding: 2rem 2rem 6rem 2rem;
+}
+
+/* main heading container*/
+.team-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* subtext for heading */
+.team-heading p {
+    padding-bottom: 2rem;
+}
+
+/* h2 heading decoration container */
+.team-decorative-heading {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* section heading text */
+.team-decorative-heading h2 {
+    text-wrap: nowrap;
+    padding: 0 1rem;
+}
+
+/* section heading decorative lines */
+.team-heading-left-separator,
+.team-heading-right-separator {
+    height: 1px;
+    width: 100%;
+    background-color: silver;
+}
+
+/* section grid/flex container */
+.team-cards-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem
+}
+
+/* card layout */
+.team-card {
+    position: relative;
+    width: 100%;
+    height: 15rem;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* baackground of the card */
+.card-background {
+    position: absolute;
+    inset: 0;
+    object-fit: cover;
+    filter: blur(2px);
+    z-index: 1;
+}
+
+/* Image of the solicitor placed on top of background and moved to the side */
+.card-lawyer {
+    position: absolute;
+    bottom: 0;
+    right: -20%;
+
+    height: auto;
+    width: 85%;
+
+    max-width: 320px;
+    min-width: 220px;
+
+    object-fit: contain;
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* card information panel */
+.card-info {
+    position: absolute;
+    inset: 0;
+    background-color: whitesmoke;
+    width: 70%;
+    z-index: 3;
+    transform: translateY(65%);
+    transition: transform 0.35s ease;
+}
+
+/* links in card information panel */
+.card-info a {
+    text-decoration: none;
+    color: rgba(128, 128, 0, 0.6);
+}
+
+/* card info panel behaviour on hover */
+.card-info a:hover {
+    text-decoration: none;
+    color: olive;
+}
+
+/* animation on info panel on hover */
+.team-card.is-open .card-info {
+    transform: translateY(0);
+    width: 100%;
+    height: 100%;
+}
+
+/* contact details on info panel */
+.card-additional-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+}
+
+/* info panel heading */
+.card-info h3 {
+    padding: 0.5rem 1rem;
+}
+
+/* info panel subheading */
+.card-info h4 {
+    padding: 0 1rem;
+}
+
+/* aditional info layout on info panel */
+.card-additional-info > div {
+    display: flex;
+    flex-direction: row;
+    padding: 0 0 0 0.5rem;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* icons styling on additional info */
+.card-additional-info svg {
+    height: 15px;
+}
+
+/* ----------------------------------------------------------------------- PRACTICE SECTION ------------------------------------------------------------------------------------*/
+.practice-flex {
+    display: flex;
+    flex-direction: column;
+    padding: 0 2rem;
+}
+
+.practice-flex-heading {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 2rem;
+    gap: 2rem;
+}
+
+.practice-flex-heading h2 {
+    text-wrap: nowrap;
+    padding: 0 1rem;
+}
+
+.decorated-practice-flex-heading {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.practice-heading-left-separator,
+.practice-heading-right-separator {
+    height: 1px;
+    width: 100%;
+    background-color: silver;
+}
+
+.cards-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-text {
+        padding: 2rem 0rem;
+    }
+
+.practice-card {
+    border-top: 1px solid silver;
+    text-decoration: none;
+    color: black;
+}
+
+.practice-card:last-child {
+    border-bottom: 1px solid silver;
+}
+
+.card-text {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease, color 0.3s ease, padding 0.3s ease;
+}
+
+.practice-card:hover {
+    background-color: olive;
+    color: white;
+}
+
+.card-decoration {
+    display: flex;
+    flex-direction: row;
+}
+
+.card-accent-line {
+    height: 0.1rem;
+    width: 10rem;
+    background-color: rgba(128, 128, 0, 0.6);
+}
+
+/* --------------------------------------------------------------------- CONTACT US SECTION -----------------------------------------------------------------------------------*/
+
+.contact-side-by-side-map {
+    padding: 4rem 2rem;
+    min-width: 100%;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    padding: 0 0 1rem 0;
+}
+
+.contact-item a {
+    text-decoration: none;
+    color: rgba(128, 128, 0, 0.7);
+    transition: color 0.3s ease;
+}
+
+.contact-item a:hover {
+    color: olive;
+}
+
+.contact-label {
+    color: rgb(148, 148, 148);
+    font-weight: 500;
+}
+
+.contact-icon {
+    height: 20px;
+    width: 20px;
+    color: olive;
+}
+
+.contact-us-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;;
+}
+
+.contact-us-map iframe{
+    padding: 2rem 0.5rem;
+    margin: 0 auto;
+    width: 100%;
+    height: 20rem;
+}
+
+/* ---------------------------------------------------------------------- FOOTER -----------------------------------------------------------------------------------------------*/
+
+.four-column-footer {
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 2rem;
+    background-color: rgb(243, 243, 243);
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.footer-brand img {
+    width: 10rem;
+    height: auto;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem 0;
+}
+
+.footer-column a {
+    text-decoration: none;
+    color: rgba(128, 128, 0, 0.7);
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: olive;
+}
+
+
+/* ------------------------------------------------------------ EDGE CASE: small mobile screens -------------------------------------------------------------------------------- */
+
+@media (max-width: 400px) {
+    .mobile-nav {
+        padding: 1rem 0.8rem;
+    }
+
+    .hero-content {
+        max-width: 95%;
+    }
+
+    .about-content {
+        padding: 2rem 0.8rem 0 0.8rem;
+    }
+
+    .about-side-by-side {
+        padding: 2rem 0.8rem;
+    }
+
+    .animated-img-cards-section {
+        padding: 0rem 0.8rem 2rem 0.8rem;
+    }
+
+    .practice-flex {
+        padding: 2rem 0.8rem 2rem 0.8rem;
+    }
+    
+    .team-card {
+        outline: none;
+        height: 12rem;
+    }
+
+    .card-info {
+        transform: translateY(70%);
+        width: 16rem;
+    }
+
+    .contact-side-by-side-map {
+        padding: 2rem 0.8rem 2rem 0.8rem;
+    }
+
+    .team-card:hover .card-info,
+    .team-card:focus .card-info {
+        transform: translateY(0);
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* -------------------------------------------------------------------------- TABLET -------------------------------------------------------------------------------------------*/
+
+@media (min-width: 768px) {
+    .mobile-nav {
+        padding: 1rem 3rem;
+    }
+
+    .animated-img-cards-section {
+        padding: 4rem 2rem 2rem 2rem;
+    }
+
+    .team-cards-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .team-card {
+        height: 14rem;
+    }
+
+   .card-info {
+        transform: translateY(60%);
+    }
+
+    .practice-flex {
+        padding: 4rem 2rem;
+    }
+    
+    .card-text {
+        padding: 1.5rem 0;
+    }
+
+    .card-accent-line {
+        width: 15rem;
+        height: 0.15rem;
+    }
+
+    .contact-side-by-side-map {
+        display: flex;
+        flex-direction: row;
+        padding: 4rem 2rem;
+    }
+
+    .contact-us-map iframe{
+        padding: 2rem 0.5rem;
+        margin: 0 auto;
+        height: 30rem;
+        width: 23rem;
+    }
+
+    .four-column-footer {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+        padding: 4rem 1rem;
+    }
+
+    .footer-brand,
+    .footer-column {
+        padding: 0 1rem;
+    }
+
+}
+
+/* -------------------------------------------------------------------------- LAPTOP -------------------------------------------------------------------------------------------*/
+
+@media (min-width: 1024px) {
+
+    h1 {
+        font-size: 4.5rem;
+        line-height: 1.2;
+    }
+
+    /* -------------------------------------------------------------------------- HEADER -------------------------------------------------------------------------------------- */
+
+    /* hide mobile navigation for desktop devices */
+    .mobile-nav {
+        display: none;
+    }
+
+    /* display desktop navigation */
+    .desktop-nav {
+        display: flex;
+        flex-direction: column;
+        margin: 0;    
+        padding: 0; 
+        
+    }
+
+    .desktop-nav-content a {
+        font-weight: 500;
+    }
+
+    .desktop-nav-lip svg {
+        height: 20px;
+        width: auto;
+        color: olive;
+        vertical-align: middle;
+    }
+
+    .desktop-nav p {
+        color: olive;
+    }
+
+    /* display horizontal contact information bar */
+    .desktop-nav-lip {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0.5rem 4rem;
+        background: white;
+        align-items: center;
+    }
+
+    .desktop-nav-lip a {
+        text-decoration: none;
+        color: black;
+        transition: color 0.3s ease;
+    }
+
+    .desktop-nav-lip a:hover {
+        color: olive;
+    }
+
+    /* Styling and layout of contact */
+    .nav-lip-contact {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .nav-lip-social {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .nav-lip-social a > svg {
+        color: black;
+    }
+
+    .nav-lip-separator {
+        height: 1px;
+        width: 100%;
+        background-color: silver;
+        transition: opacity 0.3s ease;
+    }
+
+    /* layout & style of main desktop nav */
+    .desktop-nav-content {
+        background: white;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem 4rem;
+        align-items: center;
+        transition: transform 0.3s ease;
+    }
+
+
+    .desktop-nav-content a {
+        text-decoration: none;
+        color: black;
+        transition: color 0.3s ease;
+    }
+
+    .desktop-nav-content a:hover {
+        color: olive;
+    }
+
+    .desktop-nav-content img {
+        height: 60px;
+        width: auto;
+    }
+
+    .desktop-nav-links {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .desktop-nav-links-separator {
+        display: block;
+        height: 25px;
+        width: 1px;
+        background-color: olive;
+    }
+
+    header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background: white;
+        box-shadow: 1px 1px 8px gray;
+    }
+
+    /* -------------------------------------------------------------------------- HERO SECTION -------------------------------------------------------------------------------*/
+
+
+/* ------------------------------------------------------------- ABOUT US SECTION ---------------------------------------------------------------------------------------------*/
+
+    .about-side-by-side {
+        display: flex;
+        flex-direction: row;
+        padding: 4rem 4rem;
+        gap: 2rem;
+    }
+
+    .about-side-by-side img {
+        height: 40rem;
+        width: auto;
+        padding: 4.3rem 0;
+    }
+
+    /* -------------------------------------------------------------- TEAM SECTION ------------------------------------------------------------------------------------------------*/
+
+    .animated-img-cards-section {
+        padding: 4rem 4rem;
+    }
+    
+    .team-cards-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+    .card-lawyer {
+        width: 95%;
+    }
+
+    .card-info {
+        transform: translateY(62%);
+        width: 80%;
+    }
+
+    .card-lawyer {
+        width: 100%;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        .team-card:hover .card-info {
+            transform: translateY(45%);
+            width: 70%;
+            height: 70%;
+        }
+    }  
+
+    .card-text {
+        padding: 2rem 0rem;
+    }
+
+    /* ----------------------------------------------------------------------- PRACTICE SECTION ------------------------------------------------------------------------------------*/
+
+    .practice-card:hover .card-text {
+        padding: 2rem 3rem;
+    }
+
+    .card-accent-line {
+        width: 10rem;
+        height: 0.2rem;
+    }
+
+    .practice-flex {
+        padding: 4rem 4rem;
+    }
+
+    /* --------------------------------------------------------------------- CONTACT US SECTION -----------------------------------------------------------------------------------*/
+
+    .contact-side-by-side-map {
+        padding: 4rem 4rem;
+    }
+
+    /* ---------------------------------------------------------------------- FOOTER -----------------------------------------------------------------------------------------------*/
+
+    .four-column-footer {
+        padding: 4rem 4rem;
+    }
+
+}
+
+/* -------------------------------------------------------------------------- DESKTOP -------------------------------------------------------------------------------------------*/
+
+@media (min-width: 1440px) {
+
+    h1 , h2 , h3 , h4 {
+        font-family: "Playfair Display";
+    }
+
+    p { 
+        font-family: "Inter";
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 1.6;
+    }
+
+    h1 {
+        font-size: 6.5rem;
+        line-height: 1.2;
+    }
+
+    h2 {
+        font-size: 3.3rem;
+        line-height: 1.3;
+    }
+
+    h3 {
+        font-size: 2.4rem;
+        line-height: 1.3;
+    }
+
+    h4 {
+        font-size: 1.1rem;
+        line-height: 1.3;
+    }
+
+    a {
+        font-family: "Inter";
+        font-weight: 400;
+        font-size: 1.2rem;
+        line-height: 1.6;
+    }
+    
+    .desktop-nav-lip{
+        padding: 1rem 12rem;
+    }
+
+    .desktop-nav-content {
+        padding: 1rem 12rem;
+    }
+
+    .desktop-nav-links-separator {
+        height: 35px;
+    }
+
+    .desktop-nav-content img {
+        height: 80px;
+        width: auto;
+    }
+
+    .hero-content a {
+        margin: 4rem auto 0 auto;
+    }
+
+    .about-side-by-side {
+        padding: 4rem 12rem;
+        gap: 4rem
+    }
+
+    .about-side-by-side img {
+        height: 45rem;
+        padding: 1rem 0;
+    }
+
+    .animated-img-cards-section {
+        padding: 4rem 12rem;
+    }
+
+    .team-heading p {
+        text-align: center;
+    }
+
+    .team-cards-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+    } 
+
+    .team-card {
+        height: 16rem;
+        width: 22rem;
+    }
+
+    .card-lawyer {
+        width: 100%;
+    }
+
+    .card-info {
+        transform: translateY(58%);
+        width: 70%;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+        .team-card:hover .card-info {
+            transform: translateY(0);
+            width: 100%;
+            height: 100%;
+        }
+    }  
+
+    .practice-flex {
+        padding: 4rem 12rem;
+    }
+    
+    .practice-flex-heading {
+        padding-bottom: 4rem;
+    }
+
+    .practice-flex-heading p {
+        padding-top: 2rem;
+    }
+
+    .contact-side-by-side-map {
+        padding: 4rem 12rem;
+        gap: 6rem;
+    }
+
+    .contact-us-details {
+        flex: 1;
+    }
+
+    .contact-us-map iframe{
+        flex: 1;
+        width: 36rem;
+    }
+
+    .four-column-footer {
+        padding: 4rem 12rem;
+    }
+
+    .footer-brand p {
+        max-width: 12rem;
+    }
+
+    .contact-us-map iframe {
+        height: 40rem;
+    }
+}
