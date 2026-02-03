@@ -255,6 +255,10 @@ header {
     padding: 4rem 2rem 2rem 2rem;
 }
 
+.about-side-by-side picture {
+    display: block;
+}
+
 .about-content {
     padding: 1rem 0;
 }
