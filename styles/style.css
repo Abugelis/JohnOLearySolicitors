@@ -228,6 +228,11 @@ header {
     text-shadow: 1px 1px 4px black;
 }
 
+.hero-content p {
+    font-size: 1.4rem;
+    line-height: 1.3;
+}
+
 .hero-content a {
     text-decoration: none;
     color: white;
@@ -688,6 +693,8 @@ header {
     .footer-column {
         padding: 0 1rem;
     }
+
+
 
 }
 
