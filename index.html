@@ -16,6 +16,7 @@
         <title>Solicitors</title>
         
         <script src="../JohnOLearySolicitors/js/main.js" defer></script>
+        <link rel="preload" href="../JohnOLearySolicitors/styles/style.css" as="style">
         <link rel="stylesheet" href="../JohnOLearySolicitors/styles/style.css">
     </head>
     <body>
@@ -143,7 +144,17 @@
             <!-- About Section -->
             <section class="about-side-by-side">
 
-                <img src="../JohnOLearySolicitors/assets/images/about-team-img.webp" alt="Legal team">
+                <picture>
+                    <source
+                        media="(max-width: 768px)"
+                        srcset="../JohnOLearySolicitors/assets/images/about-team-mobile-img.webp">
+                    <img
+                        src="../JohnOLearySolicitors/assets/images/about-team-desktop-img .webp"
+                        alt="Legal team"
+                        width="1200"
+                        height="1700"
+                        loading="lazy">
+                </picture>
 
                 <div class="about-content">
                     <h2>Welcome to John O’Leary Solicitors</h2>
@@ -195,7 +206,7 @@
                 <div class="team-cards-grid">
                     <div class="team-card" data-card>
                         <img class="card-background" src="../JohnOLearySolicitors/assets/images/team-background-4.webp" alt="team card background">
-                        <img class="card-lawyer" src="../JohnOLearySolicitors/assets/images/lawyer-1.webp" alt="team lawyer one">
+                        <img class="card-lawyer" src="../JohnOLearySolicitors/assets/images/lawyer-1.webp" width="520" height="345" loading="lazy" alt="team lawyer one">
                         <div class="card-info">
                             <h3><a href="../JohnOLearySolicitors/team/nora-staples.html">Nora Staples</a></h3>
                             <h4>Consultant</h4>
@@ -229,7 +240,7 @@
                     </div>
                     <div class="team-card" data-card>
                         <img class="card-background" src="../JohnOLearySolicitors/assets/images/team-background-4.webp" alt="team card background">
-                        <img class="card-lawyer" src="../JohnOLearySolicitors/assets/images/lawyer-2.webp" alt="team lawyer one">
+                        <img class="card-lawyer" src="../JohnOLearySolicitors/assets/images/lawyer-2.webp" width="520" height="345" loading="lazy" alt="team lawyer one">
                         <div class="card-info">
                             <h3><a href="../JohnOLearySolicitors/team/john-oleary.html">John O'Leary</a></h3>
                             <h4>Partner</h4>
@@ -263,7 +274,7 @@
                     </div>
                     <div class="team-card" data-card>
                         <img class="card-background" src="../JohnOLearySolicitors/assets/images/team-background-4.webp" alt="team card background">
-                        <img class="card-lawyer" src="../JohnOLearySolicitors/assets/images/lawyer-3.webp" alt="team lawyer one">
+                        <img class="card-lawyer" src="../JohnOLearySolicitors/assets/images/lawyer-3.webp" width="520" height="345" loading="lazy" alt="team lawyer one">
                         <div class="card-info">
                             <h3><a href="../JohnOLearySolicitors/team/steven-goodman.html">Steven Goodman</a></h3>
                             <h4>Partner</h4>
@@ -297,7 +308,7 @@
                     </div>
                     <div class="team-card" data-card>
                         <img class="card-background" src="../JohnOLearySolicitors/assets/images/team-background-4.webp" alt="team card background">
-                        <img class="card-lawyer" src="../JohnOLearySolicitors/assets/images/lawyer-4.webp" alt="team lawyer one">
+                        <img class="card-lawyer" src="../JohnOLearySolicitors/assets/images/lawyer-4.webp" width="520" height="345" loading="lazy" alt="team lawyer one">
                         <div class="card-info">
                             <h3><a href="../JohnOLearySolicitors/team/irene-thompson.html">Irene Thompson</a></h3>
                             <h4>Partner</h4>
