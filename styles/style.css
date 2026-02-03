@@ -264,6 +264,11 @@ header {
     display: block;
 }
 
+.about-side-by-side img {
+    width: 26rem;
+    height: auto;
+}
+
 .about-content {
     padding: 1rem 0;
 }
