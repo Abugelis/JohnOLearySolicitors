@@ -194,6 +194,12 @@ a:focus {
 
 /* ------------------ Form ------------------ */
 
+select {
+    -webkit-appearance: none;
+    appearance: none;
+    border-radius: 0;
+}
+
 .contact-us-form {
     padding: 1rem;
     border: 1px solid silver;
